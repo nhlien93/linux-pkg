@@ -10,6 +10,7 @@ cloud-init
 crash
 crash-python
 crypt-blowfish
+delphix-docker
 delphix-platform
 delphix-sso-app
 drgn

@@ -1,0 +1,8 @@
+%:
+	dh $@
+
+override_dh_install:
+	mkdir -p debian/tmp/opt/delphix/server/etc
+	docker pull registry.delphix.com/python:2.7.18-slim
+	docker save -o debian/tmp/opt/delphix/server/etc/docker-image-python-2-7-18-slim.tar registry.delphix.com/python:2.7.18-slim
+	dh_install --autodest "debian/tmp/*"
